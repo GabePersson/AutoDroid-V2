@@ -12,7 +12,7 @@ evaluation/droidtask/data/evaluated_results
 ```
 ### 📌 **Mandatory Files**  
 To evaluate the DroidTask experiments, you need to download the experimental data from the following link:  
-🔗 **[Download Link](https://cloud.tsinghua.edu.cn/d/36bf852d54c742578673/files/?p=%2Fexperiments_data.zip)** 
+🔗 **[Download Link](https://cloud.tsinghua.edu.cn/f/cbd4606d5d4749c38c1c/)** 
 
 Once downloaded, extract the results for each agent into the following directory:  
 ```

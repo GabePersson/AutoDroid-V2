@@ -34,3 +34,21 @@ To ensure the virtual device runs correctly on your desktop, please follow these
 After completing the above steps, you can launch the Android virtual device. On the first run, you can save a snapshot for future use in case your agent changes the apps data.  
 
 # 2. Install Droidbot
+### Prerequisite
+1. Python
+
+2. Java
+
+3. Android SDK
+
+4. Add platform_tools directory in Android SDK to PATH
+
+### Install
+
+
+```
+download the apks from https://cloud.tsinghua.edu.cn/f/eeea64534064438abbc4/, unzip the apks.zip and put the apks under apks folder
+git clone https://github.com/MobileLLM/AutoDroid-V2.git
+cd AutoDroid-V2/step_4_accuracy_validation
+pip install -e .
+```

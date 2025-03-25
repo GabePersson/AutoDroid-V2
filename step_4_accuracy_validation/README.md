@@ -73,6 +73,11 @@ Additionally, the script will print the results directly in the command line for
 
 For any questions or troubleshooting, feel free to open an issue in the repository. 🚀
 
+# Running Experiments Setup
+
+To run experiments with the fine-tuned model we provide, please download the model [here](https://huggingface.co/BlitherBoom/AutoDroid-V2). Save the model files in the following directory: **evaluation/model**
+
+
 # Running LLama Touch Experiment
 
 ## Overview  

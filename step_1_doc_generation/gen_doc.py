@@ -1,20 +1,20 @@
 import argparse
 import os
-import doc_generation.tools as tools
-from doc_generation.describe_interactions import describe
-from doc_generation.build_xpath import ScreenSkeletonBuilder, XPathBuilder
-from doc_generation.build_dependency import DependencyGraph
-from doc_generation.post_process_doc import post_process
-from doc_generation.extract_additional_elements import extract_additional_elements
+import tools as tools
+from .describe_interactions import describe
+from .build_xpath import ScreenSkeletonBuilder, XPathBuilder
+from .build_dependency import DependencyGraph
+from .post_process_doc import post_process
+from .extract_additional_elements import extract_additional_elements
 from pathlib import Path
 import copy
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+from dotenv import load_dotenv
 
+load_dotenv()
 
-os.environ["OPENAI_API_KEY"] = ''
-os.environ["OPENAI_API_URL"] = ''
 MAX_RETRY = 10
 
 def parse_args():

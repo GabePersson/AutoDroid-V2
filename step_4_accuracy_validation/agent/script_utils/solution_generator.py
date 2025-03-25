@@ -115,7 +115,7 @@ Note that:
 - **pay attention to save the changes to the app settings, if save appears in the UI**'''
   
   def load_autodroidv2(self):
-      model_path = "autodroidv2"
+      model_path = "evaluation/model"
       tokenizer = AutoTokenizer.from_pretrained(model_path)
       model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16, device_map="auto")
       return model, tokenizer

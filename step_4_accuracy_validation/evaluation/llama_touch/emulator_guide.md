@@ -50,7 +50,7 @@ path_to_your_android_sdk/cmdline-tools/latest/bin/avdmanager create avd -n pixel
 ### 6. Launch the AVD
    - For the Android GUI:
    ```bash
-   emulator -avd pixel_6a_api_31
+   emulator -avd pixel_6a_api_3
    ```
    - For headless mode (no Android GUI):
    ```bash

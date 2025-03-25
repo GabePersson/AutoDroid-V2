@@ -6,7 +6,7 @@ import logging
 import tools as tools
 from agent.environment import AsyncDroidBotEnvForLlamaTouch
 from agent.code_agent import CodeAgent
-from evaluation.llama_touch.config.config import AgentEnvConfig, LogConfig
+from minimal_setup.config import AgentEnvConfig, LogConfig
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -53,9 +53,9 @@ def main():
           #### UNCOMMENT FOR DIRECT SCRIPT DEBUGGING 
 #         code_agent.FREEZED_CODE = True
 #         code_agent.code_config.code = '''
-# $server_overview_screen__you_button.tap()
-# $personal_profile_screen__settings_button.tap()
-# $settings_screen__notifications_button.tap()
+#  $server_overview_screen__you_button.tap()
+#  $personal_profile_screen__settings_button.tap()
+#  $settings_screen__notifications_button.tap()
 # '''
 
 

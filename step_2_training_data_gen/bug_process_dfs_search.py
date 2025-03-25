@@ -25,6 +25,9 @@ from agent.script_utils import tools
 from agent.script_utils.bug_processor import BugProcessorV3
 from agent.script_utils.api_doc import ApiDoc
 from agent.script_utils.err import XPathError, APIError, ActionError, NotFoundError, TaskNotCompletedError
+from dotenv import load_dotenv
+
+load_dotenv()
 
 '''
 Tree Search

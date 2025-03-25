@@ -146,7 +146,7 @@ class GPT:
 
     # gpt-3.5-turbo-1106, gpt-4-1106-preview
     @staticmethod
-    def query(prompt, model='gpt-3.5-turbo-1106', url=os.environ['GPT_API_URL'], api_key=os.environ['GPT_API_KEY'], temperature=0.7, verbose=True):
+    def query(prompt, model='gpt-3.5-turbo-1106', url=os.getenv('OPENAI_API_URL'), api_key=os.getenv("OPENAI_API_KEY"), temperature=0.7, verbose=True):
         body = {'model':model, 'messages':[{'role':'user','content':prompt}], 'temperature': temperature}
         headers = {'Content-Type': 'application/json', 'Authorization': f'Bearer {api_key}', }
         if verbose:
@@ -169,7 +169,7 @@ class GPT:
         client = OpenAI(
             base_url='https://api.openai-proxy.org/v1',
             # This is the default and can be omitted
-            api_key=os.environ['GPT_API_KEY']
+            api_key=os.getenv("OPENAI_API_KEY")
         )
         retry = 0
         while retry < retry_times:
@@ -199,7 +199,7 @@ class GPT:
         # import pdb;pdb.set_trace()
         client = anthropic.Anthropic(
             # defaults to os.environ.get("ANTHROPIC_API_KEY")
-            api_key=os.environ['GPT_API_KEY'],
+            api_key=os.getenv("OPENAI_API_KEY"),
             base_url="https://api.openai-proxy.org/anthropic",
             
         )
@@ -216,7 +216,7 @@ class GPT:
         import anthropic
         client = anthropic.Anthropic(
         # defaults to os.environ.get("ANTHROPIC_API_KEY")
-            api_key=os.environ['GPT_API_KEY'],
+            api_key=os.getenv("OPENAI_API_KEY"),
             base_url="https://api.openai-proxy.org/anthropic")
         retry = 0
         while retry < 12:

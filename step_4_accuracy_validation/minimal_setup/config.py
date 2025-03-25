@@ -1,3 +1,5 @@
+
+
 class AgentEnvConfig:
     
     """
@@ -26,13 +28,13 @@ class AgentEnvConfig:
             - "no-window": A boolean string ('true' or 'false') indicating whether the emulator should
               run without opening a GUI window. Useful for running tests in a headless environment.
     """
-    LOCAL_OUTPUT_PATH = "evaluation/llama_touch/experiment/gpt_4o"
+    LOCAL_OUTPUT_PATH = "minimal_experiment_output/gpt_4o"
     MODEL = "gpt-4o" #gpt-4-0125-preview #autodroidv2
     # INSTRUCTION_FILE_PATH = "docs/instructions/llamatouch_task_metadata.csv"
-    DOCS_BASE_DIR = "evaluation/llama_touch/docs"
-    INSTRUCTION_FILE_PATH = "evaluation/llama_touch/instructions/setup_test.tsv"
-    AVD_NAME = "pixel_6a_api31"    
-    BASE_APKS_PATH = f"evaluation/llama_touch/apks"
+    DOCS_BASE_DIR = "minimal_setup/docs"
+    BASE_APKS_PATH = f"minimal_setup/apks"
+    INSTRUCTION_FILE_PATH = "minimal_setup/instruction.tsv"
+    AVD_NAME = "pixel_6a_api31"
     MAX_STEPS = 30
     EMULATOR_CONTROLLER_AGRS = {
         "snapshot" : "snap_2024-11-12_14-17-11",
@@ -40,17 +42,7 @@ class AgentEnvConfig:
         # "no-window" : "true",  # Change this to "true" to run the emulator without GUI.
     }
     APKS_PER_APP = {
-        # AITW
-        "Settings": "settings/base.apk",
-        "Contacts": "contacts/base.apk",
-        "Google Chrome": "chrome/base.apk",
-        "Google Play Store": "play_store/base.apk",
-        "Google Maps": "maps/base.apk",
-        "Google Photos": "photos/base.apk",
-        "Google Calendar": "calendar/base.apk",
-        "Gmail": "gmail/base.apk",
-        "Clock": "clock/base.apk",
-        "YouTube": "youtube/base.apk",
+        "App Launcher": "applauncher.apk",
     }
 
 class LogConfig:

@@ -9,7 +9,6 @@ import yaml
 import ast
 from bs4 import BeautifulSoup, Tag, NavigableString
 import tiktoken
-os.environ['GPT_API_KEY'] = ''
 
 gpt_models = [
     "gpt-3.5-turbo", "gpt-3.5-turbo-16k", "gpt-4", "gpt-4-32k", "gpt-4o",
@@ -48,9 +47,9 @@ def query_gpt(prompt, model="gpt-3.5-turbo"):
   max_retry = 8
   if model.startswith("gpt"):
     cli = OpenAI(base_url="https://chat1.plus7.plus/v1",
-                 api_key=os.environ['GPT_API_KEY'])
+                 api_key=os.getenv("OPENAI_API_KEY"))
     # cli = OpenAI(base_url="https://api.openai-proxy.org/v1",
-    #              api_key=os.environ['GPT_API_KEY']))
+    #              api_key=os.getenv("OPENAI_API_KEY")))
     retry = 0
     err = None
     while retry < max_retry:
@@ -77,7 +76,7 @@ def query_gpt(prompt, model="gpt-3.5-turbo"):
     url = 'https://api.openai-proxy.org/anthropic/v1/messages'
 
     headers = {
-        'x-api-key': os.environ['GPT_API_KEY'],
+        'x-api-key': os.getenv("OPENAI_API_KEY"),
         'anthropic-version': '2023-06-01',
         'content-type': 'application/json',
     }
@@ -126,7 +125,7 @@ def dump_json_file(json_path, data):
 def debug_query_gptv2(prompt: str, model_name: str, temperature: float = 0.2, timeout: int = 120):
     client = OpenAI(
         base_url='https://tbnx.plus7.plus/v1',
-        api_key=os.environ['GPT_API_KEY'])
+        api_key=os.getenv("OPENAI_API_KEY"))
     completion = client.chat.completions.create(
     messages=[
             {
@@ -496,7 +495,7 @@ def query_claude(prompt: str,
     return res
 
 def query_llm(prompt: str, model_name="", retry_times=6):
-    openai.base_url = os.environ.get('LLM_API_URL')
+    openai.base_url = os.environ.get('OPENAI_API_URL')
     openai.api_key = os.environ.get('LLM_API_KEY')
 
     # create a completion

@@ -6,6 +6,9 @@ import yaml
 from evaluation.droidtask.config import BASE_EXPERIMENT_PATH, BASELINE_PATH, GROUNDTRUTH_PATH, TASKS_GROUNDTRUTH_PATH, EMULATOR_AGRS
 from evaluation.droidtask.experiment.test_all_tasks import run_all_tasks
 import tools as tools
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_element(html_str, id):
     from lxml import etree

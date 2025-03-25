@@ -138,7 +138,6 @@ from droidbot.app import App
 from droidbot.device_state import DeviceState
 from droidbot import input_event
 
-BASE_APKS_PATH = f"evaluation/llama_touch/apks"
 class AsyncDroidBotEnvForLlamaTouch(AsyncEnv):
   
   def __init__(self, avd_name = None, emulator_controller_args=None,\
@@ -248,7 +247,7 @@ class AsyncDroidBotEnvForLlamaTouch(AsyncEnv):
       self.app_name = app_name
 
     self._setup_directories(self.task_output_path)
-    apk_path = f"{BASE_APKS_PATH}/{self.config.APKS_PER_APP[self.app_name]}"
+    apk_path = f"{self.config.BASE_APKS_PATH}/{self.config.APKS_PER_APP[self.app_name]}"
     app = App(apk_path, f"{self.device_logs}/{self.app_name}")
     
     self.device.send_event(input_event.RestartAppEvent(app=app))

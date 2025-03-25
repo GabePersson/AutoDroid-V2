@@ -19,7 +19,7 @@ BASE_EXPERIMENT_PATH = "evaluation/droidtask/experiment/output"
 BASELINE_PATH = {
     "autodroid_llama": "evaluation/droidtask/data/autodroidv1_llama_results",
     "autodroid_gpt": "evaluation/droidtask/data/autodroidv1_gpt_results",
-    "autodroidv2_llama": "evaluation/droidtask/data/autodroidv1_llama_results",      
+    "autodroidv2_llama": "evaluation/droidtask/data/autodroidv2_llama_results",      
     "autodroidv2_gpt": "evaluation/droidtask/data/autodroidv2_gpt_results",      
     "mind2web_llama": "evaluation/droidtask/data/mind2web_llama_results",
     "mind2web_gpt": "evaluation/droidtask/data/mind2web_gpt_results",

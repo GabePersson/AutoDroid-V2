@@ -10,7 +10,7 @@ import traceback
 import pkg_resources
 import shutil
 import subprocess
-import agent.environment
+import agent.environment as environment
 import tools as tools
 from evaluation.droidtask.config import BASE_APK_PATH, DEBUG_MODE, DOC_PATH, EMULATOR_AGRS, FIRST_SCREEN_ELEMENTS_PATH, TASKS_PATH
 from evaluation.droidtask.experiment.query_llm import make_solution_prompt_droidtask_tune

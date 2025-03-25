@@ -1,3 +1,3 @@
-from droidbot.droidbot import DroidBot
-from droidbot.device import Device
-from droidbot.app import App
+from agent.droidbot.droidbot import DroidBot
+from agent.droidbot.device import Device
+from agent.droidbot.app import App

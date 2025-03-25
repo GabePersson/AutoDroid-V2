@@ -1,6 +1,6 @@
 import tools as tools
-import environment
-from script_utils.api_doc import ApiDoc
+import agent.environment as environment
+from agent.script_utils.api_doc import ApiDoc
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 
@@ -115,7 +115,7 @@ Note that:
 - **pay attention to save the changes to the app settings, if save appears in the UI**'''
   
   def load_autodroidv2(self):
-      model_path = "evaluation/model"
+      model_path = "autodroidv2"
       tokenizer = AutoTokenizer.from_pretrained(model_path)
       model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16, device_map="auto")
       return model, tokenizer

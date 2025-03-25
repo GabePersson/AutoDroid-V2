@@ -38,6 +38,7 @@ class AgentEnvConfig:
         "port" : "5554",
         # "no-window" : "true",  # Change this to "true" to run the emulator without GUI.
     }
+    BASE_APKS_PATH = f"evaluation/llama_touch/apks"
     APKS_PER_APP = {
         # AITW
         "Settings": "settings/base.apk",

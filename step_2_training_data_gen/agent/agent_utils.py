@@ -13,7 +13,7 @@ from lxml import etree
 from PIL import Image
 import logging
 
-from droidbot.device_state import EleAttr, DeviceState
+from agent.droidbot.device_state import EleAttr, DeviceState
 
 def extract_json(s: str) -> Optional[dict[str, Any]]:
   """Extracts JSON from string.

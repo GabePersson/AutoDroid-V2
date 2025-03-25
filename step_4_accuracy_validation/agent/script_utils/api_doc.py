@@ -1,9 +1,9 @@
 import json
 import re
 import datetime
-import environment
+import agent.environment as environment
 
-from droidbot.device_state import HTMLSkeleton, ElementTree, EleAttr
+from agent.droidbot.device_state import HTMLSkeleton, ElementTree, EleAttr
 
 UI_SCREEN_ELEMENT_DELIMITER = '__'
 class DependentAction():

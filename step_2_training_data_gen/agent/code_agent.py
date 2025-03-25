@@ -5,12 +5,12 @@ import os
 import re
 import traceback
 import tools as tools
-import environment
-from script_utils.ui_apis import CodeConfig, CodeStatus, Verifier, regenerate_script, _save2log
-from script_utils.bug_processor import BugProcessorV3
-from script_utils.solution_generator import SolutionGenerator
-from script_utils.api_doc import ApiDoc
-from script_utils.err import XPathError
+import agent.environment as environment
+from agent.script_utils.ui_apis import CodeConfig, CodeStatus, Verifier, regenerate_script, _save2log
+from agent.script_utils.bug_processor import BugProcessorV3
+from agent.script_utils.solution_generator import SolutionGenerator
+from agent.script_utils.api_doc import ApiDoc
+from agent.script_utils.err import XPathError
 
 
 def process_error_info(original_script, compiled_script, traceback, error, error_type,

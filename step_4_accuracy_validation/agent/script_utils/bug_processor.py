@@ -1,12 +1,12 @@
 import re
-import environment
+import agent.environment as environment
 import tools as tools
 from lxml import etree
-from script_utils.gen_dependency_tree import get_semantic_dependencies
-from script_utils.api_doc import ApiDoc
-from script_utils.err import ActionError, APIError, XPathError, NotFoundError
+from agent.script_utils.gen_dependency_tree import get_semantic_dependencies
+from agent.script_utils.api_doc import ApiDoc
+from agent.script_utils.err import ActionError, APIError, XPathError, NotFoundError
 
-from script_utils.solution_generator import ACTIONS_DSL_PROMPT_DESCRIPTION
+from agent.script_utils.solution_generator import ACTIONS_DSL_PROMPT_DESCRIPTION
 
 class BugProcessor:
 

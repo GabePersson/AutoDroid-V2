@@ -5,7 +5,7 @@ from itertools import combinations
 import re
 from argparse import ArgumentParser
 
-from script_utils.parallel_query import MultiProcessingQuery as mtp
+from agent.script_utils.parallel_query import MultiProcessingQuery as mtp
 import tools as tools
 
 

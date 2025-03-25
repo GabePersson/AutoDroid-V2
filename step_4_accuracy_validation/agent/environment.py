@@ -10,8 +10,8 @@ from typing import Any, Iterator
 
 import pandas as pd
 
-from droidbot.device_state import ElementTree
-from emulator_controller import EmulatorController
+from agent.droidbot.device_state import ElementTree
+from agent.emulator_controller import EmulatorController
 
 @dataclasses.dataclass(frozen=True)
 class State():
@@ -133,10 +133,10 @@ class AsyncEnv(abc.ABC):
   def close(self) -> None:
     """Closes the environment."""
     
-from droidbot.device import Device
-from droidbot.app import App
-from droidbot.device_state import DeviceState
-from droidbot import input_event
+from agent.droidbot.device import Device
+from agent.droidbot.app import App
+from agent.droidbot.device_state import DeviceState
+from agent.droidbot import input_event
 
 class AsyncDroidBotEnvForLlamaTouch(AsyncEnv):
   

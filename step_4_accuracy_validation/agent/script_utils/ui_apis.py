@@ -8,12 +8,13 @@ import datetime
 
 import logging
 import tools as tools
-import agent_utils, environment
+import agent.agent_utils as agent_utils
+import agent.environment as environment
 
-from droidbot.device_state import ElementTree, EleAttr, DeviceState
+from agent.droidbot.device_state import ElementTree, EleAttr, DeviceState
 
-from script_utils.api_doc import ApiDoc
-from script_utils.err import XPathError, APIError, ActionError, NotFoundError
+from agent.script_utils.api_doc import ApiDoc
+from agent.script_utils.err import XPathError, APIError, ActionError, NotFoundError
 
 from . import MAX_SCROLL_NUM, MAX_ACTION_COUNT, LOGGING_ENABLED, MAX_DEPENDENCE_DEPTH, MAX_DEPENDENCE_WIDTH, WAIT_AFTER_ACTION_SECONDS
 

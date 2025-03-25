@@ -1,6 +1,6 @@
 import tools as tools
-import environment
-from script_utils.api_doc import ApiDoc
+import agent.environment as environment
+from agent.script_utils.api_doc import ApiDoc
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 

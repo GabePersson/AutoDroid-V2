@@ -10,8 +10,8 @@ from typing import Any, Iterator
 
 import pandas as pd
 
-from droidbot.device_state import ElementTree
-from emulator_controller import EmulatorController
+from agent.droidbot.device_state import ElementTree
+from agent.emulator_controller import EmulatorController
 
 @dataclasses.dataclass(frozen=True)
 class State():
@@ -133,12 +133,11 @@ class AsyncEnv(abc.ABC):
   def close(self) -> None:
     """Closes the environment."""
     
-from droidbot.device import Device
-from droidbot.app import App
-from droidbot.device_state import DeviceState
-from droidbot import input_event
+from agent.droidbot.device import Device
+from agent.droidbot.app import App
+from agent.droidbot.device_state import DeviceState
+from agent.droidbot import input_event
 
-BASE_APKS_PATH = f"evaluation/llama_touch/apks"
 class AsyncDroidBotEnvForLlamaTouch(AsyncEnv):
   
   def __init__(self, avd_name = None, emulator_controller_args=None,\
@@ -248,7 +247,7 @@ class AsyncDroidBotEnvForLlamaTouch(AsyncEnv):
       self.app_name = app_name
 
     self._setup_directories(self.task_output_path)
-    apk_path = f"{BASE_APKS_PATH}/{self.config.APKS_PER_APP[self.app_name]}"
+    apk_path = f"{self.config.BASE_APKS_PATH}/{self.config.APKS_PER_APP[self.app_name]}"
     app = App(apk_path, f"{self.device_logs}/{self.app_name}")
     
     self.device.send_event(input_event.RestartAppEvent(app=app))

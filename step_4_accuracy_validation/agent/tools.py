@@ -171,6 +171,10 @@ def write_txt_file(txt_path, data):
     with open(txt_path, 'w', encoding="utf-8") as f:
         f.write(data)
 
+def append_to_txt_file(txt_path, data):
+  with open(txt_path, 'a', encoding='utf-8') as f:
+    f.write(data)
+    
 def load_yaml_file(yaml_path):
     with open(yaml_path, 'r') as f:
         data = yaml.safe_load(f)

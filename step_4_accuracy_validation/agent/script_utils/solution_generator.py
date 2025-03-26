@@ -57,7 +57,7 @@ class SolutionGenerator:
     self.app_name = app_name
     self.task = task
     self.doc = doc
-    model_name = model_name
+    self.model_name = model_name
     if model_name == "autodroidv2":
       self.load_autodroidv2()
     

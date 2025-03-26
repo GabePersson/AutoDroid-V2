@@ -3,10 +3,10 @@ import os
 docs_dir = 'data/droidtask/docs'
 docs_path = [d for d in os.listdir(docs_dir) if os.path.isdir(os.path.join(docs_dir, d))]
 
-target_dir = 'output/formatted/droidtask'
+target_dir = 'data/droidtask/formatted_docs'
 os.makedirs(target_dir, exist_ok=True)
-for doc_path in docs_path:
-  doc_data = json.load(open(os.path.join(docs_dir, doc_path, 'doc.json'), 'r'))
+for doc_path in os.listdir(docs_dir):
+  doc_data = json.load(open(os.path.join(docs_dir, doc_path), 'r'))
   
   # screen_name -> elements, skeleton
   for k, v in doc_data.items():
@@ -40,4 +40,4 @@ for doc_path in docs_path:
     
     doc_data[k]['elements'] = _elements
   
-  json.dump(doc_data, open(os.path.join(target_dir, doc_path + '.json'), 'w'), indent=2)
+  json.dump(doc_data, open(os.path.join(target_dir, doc_path), 'w'), indent=2)

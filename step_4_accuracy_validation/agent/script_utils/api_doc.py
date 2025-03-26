@@ -21,9 +21,9 @@ class DependentAction():
     self.text: str = None
 
     if 'back()' in action:
-      _action = action
+      _action = "back()"
     elif 'enter()' in action:
-      _action = action
+      _action = "enter()"
     else:
       m = re.search(r'(\w+)\.', action) # only first is screen name
       assert m is not None
@@ -80,7 +80,7 @@ class DependentAction():
       self.action_type = 'enter'
       assert len(self.argv) == 0
     else:
-      raise ValueError(f'Unknown action type: {self.action_type} in {action}')
+      raise print(f'Unknown action type: {self.action_type} in {action}')
 
   @staticmethod
   def _extract_arguments(sentence):

@@ -73,6 +73,7 @@ step_1_doc_generation/examples
 step_2_training_data_gen/agent/droidbot/resources/
 step_4_accuracy_validation/evaluation/droidtask/apks
 step_4_accuracy_validation/evaluation/llama_touch/apks
+step_4_accuracy_validation/evaluation/droidtask/data
 step_4_accuracy_validation/evaluation/llama_touch/data/agent_exec_traces
 step_4_accuracy_validation/evaluation/llama_touch/data/llamatouch_dataset_0521
 step_4_accuracy_validation/agent/droidbot/resources/

@@ -26,4 +26,4 @@ BASELINE_PATH = {
     "seeclick": "evaluation/droidtask/data/seeclick_results",
     "cogagent": "evaluation/droidtask/data/cogagent_results",
 }
-GROUNDTRUTH_PATH = 'evaluation/droidtask/data/autodroidv1_llama_results'
+GROUNDTRUTH_PATH = 'evaluation/droidtask/data/groundtruth'

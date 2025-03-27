@@ -2,10 +2,11 @@
 
 Clone and install [llama.cpp](https://github.com/ggerganov/llama.cpp) following the official instruction to [install](https://github.com/ggml-org/llama.cpp/blob/master/docs/android.md).
 
-Convert and quantize the model using llama.cpp:
+Download the [model](https://huggingface.co/BlitherBoom/AutoDroid-V2), convert and quantize it using llama.cpp (you can also download, convert, and quantize it on your computer first, then transfer the output file to your phone):
 ```bash
-python llama.cpp/convert_hf_to_gguf.py ./AutoDroid-V2 --outfile ./AutoDroid-V2.gguf --outtype f16
-./llama-quantize AutoDroid-V2.gguf AutoDroid-V2-Q8_0.gguf Q8_0
+cd llama.cpp
+python convert_hf_to_gguf.py ./AutoDroid-V2 --outfile ./AutoDroid-V2.gguf --outtype f16
+./build/bin/llama-quantize AutoDroid-V2.gguf AutoDroid-V2-Q8_0.gguf Q8_0
 ```
 
 Then config the test app and the model path in `./run_infer.py`:

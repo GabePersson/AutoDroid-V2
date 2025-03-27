@@ -7,6 +7,7 @@ The settings that must be cofigured are the following:
 ```bash
 pip install -r requirements.txt
 ```
+2. To run experiments with the fine-tuned model we provide, please download the model [here](https://huggingface.co/BlitherBoom/AutoDroid-V2). Save the model files in the following directory: **step_4_accuracy_validation/model/autodroidv2**
 2. Install ADB
 Android Debug Bridge (adb) is a versatile command-line tool that lets you communicate with a device. You can download it from [here](https://developer.android.com/tools/releases/platform-tools) and follow the guide to set it up.
 3. Setup an **Android Emulator Device** e.g. [AVD](https://developer.android.com/studio/run/managing-avds) 
@@ -26,4 +27,4 @@ cd step_4_accuracy_validation
 ```bash
 python run_minimal_experiment.py
 ```
-- To see the output of the experiment results, check the following folder defined in the config file: **step_4_accuracy_validation/minimal_experiment_output/gpt_4o**
+- To see the output of the experiment results, check the following folder defined in the config file: **step_4_accuracy_validation/minimal_experiment_output/autodroidv2**

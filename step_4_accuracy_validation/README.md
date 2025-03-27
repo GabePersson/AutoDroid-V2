@@ -75,7 +75,7 @@ For any questions or troubleshooting, feel free to open an issue in the reposito
 
 # Running Experiments Setup
 
-To run experiments with the fine-tuned model we provide, please download the model [here](https://huggingface.co/BlitherBoom/AutoDroid-V2). Save the model files in the following directory: **evaluation/model**
+To run experiments with the fine-tuned model we provide, please download the model [here](https://huggingface.co/BlitherBoom/AutoDroid-V2). Save the model files in the following directory: **model/autodroidv2**
 
 
 # Running LLama Touch Experiment

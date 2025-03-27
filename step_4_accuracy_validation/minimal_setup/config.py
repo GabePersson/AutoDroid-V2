@@ -28,8 +28,8 @@ class AgentEnvConfig:
             - "no-window": A boolean string ('true' or 'false') indicating whether the emulator should
               run without opening a GUI window. Useful for running tests in a headless environment.
     """
-    LOCAL_OUTPUT_PATH = "minimal_experiment_output/gpt_4o"
-    MODEL = "gpt-4o" #gpt-4-0125-preview #autodroidv2
+    LOCAL_OUTPUT_PATH = "minimal_experiment_output/autodroidv2"
+    MODEL = "autodroidv2" #gpt-4-0125-preview #autodroidv2
     # INSTRUCTION_FILE_PATH = "docs/instructions/llamatouch_task_metadata.csv"
     DOCS_BASE_DIR = "minimal_setup/docs"
     BASE_APKS_PATH = f"minimal_setup/apks"

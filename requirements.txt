@@ -14,3 +14,4 @@ matplotlib==3.7.2
 networkx==3.2.1
 pyvis==0.3.2
 setuptools==78.0.2
+androguard==4.1.3

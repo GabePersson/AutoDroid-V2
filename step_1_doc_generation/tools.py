@@ -58,7 +58,7 @@ def query_gpt(prompt, model="gpt-3.5-turbo"):
   '''
   max_retry = 8
   if model.startswith("gpt"):
-    cli = OpenAI(base_url="https://chat1.plus7.plus/v1",
+    cli = OpenAI(base_url=os.getenv("OPENAI_API_URL"),
                  api_key=os.getenv("OPENAI_API_KEY"))
     # cli = OpenAI(base_url="https://api.openai-proxy.org/v1",
     #              api_key=os.getenv("OPENAI_API_KEY"))

@@ -28,7 +28,7 @@ def num_tokens_from_string(string: str, encoding_name: str = "cl100k_base") -> i
 def query_model(model, prompt):
     try:
         if model in gpt_models:
-            answer = query_gpt(prompt, model_name=model)
+            answer = query_gpt(prompt, model=model)
         elif model in claude_models:
             answer = query_claude(prompt, model_name=model)
         else:

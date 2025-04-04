@@ -48,18 +48,21 @@ def query_gpt(prompt, model="gpt-3.5-turbo"):
   if model.startswith("gpt"):
     cli = OpenAI(base_url=os.getenv('OPENAI_API_URL'),
                  api_key=os.getenv('OPENAI_API_KEY'))
-    # cli = OpenAI(base_url="https://api.openai-proxy.org/v1",
-    #              api_key=os.getenv('OPENAI_API_KEY')))
     retry = 0
     err = None
     while retry < max_retry:
       try:
-        completion = cli.chat.completions.create(messages=[{
-            "role": "user",
-            "content": prompt,
-        }],
-                                                 model=model,
-                                                 timeout=60)
+        completion = cli.chat.completions.create(
+            messages=[
+                    {
+                        "role": "user",
+                        "content": prompt,
+                    }
+                ],
+            model=model,
+            timeout=60, 
+            temperature=0.5, 
+        )
         break
       except Exception as e:
         print(f'retrying {retry} times...')

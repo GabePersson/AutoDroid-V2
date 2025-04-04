@@ -80,3 +80,4 @@ step_4_accuracy_validation/agent/droidbot/resources/
 step_4_accuracy_validation/minimal_experiment_output
 temp/
 garbage
+.env
